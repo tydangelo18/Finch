@@ -1,29 +1,46 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
-import TwitterAPI from "../../utils/TwitterAPI";
-import SavedTweets from "../../components/Saved/SavedTweets";
-import DashboardHome from "../../components/Dashboard/DashboardHome";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { logoutUser } from '../../actions/authActions';
+import TwitterAPI from '../../utils/TwitterAPI';
+import SavedTweets from '../../components/Saved/SavedTweets';
+import DashboardHome from '../../components/Dashboard/DashboardHome';
 import Button from '@material-ui/core/Button';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
+import { makeStyles } from '@material-ui/core/styles';
 
-class Dashboard extends Component {
+function Dashboard(props, onLogoutClick) {
   onLogoutClick = (e) => {
     e.preventDefault();
-    this.props.logoutUser();
+    props.logoutUser();
   };
 
-  render() {
-    const { user } = this.props.auth;
+  const { user } = props.auth;
 
-    return (
-      <div>
-        <h3>You are sucessfully logged out.</h3>
-        <button onClick={this.onLogoutClick}>Logout</button>
-          <DashboardHome />
+  // Style Hook
+  const useStyles = makeStyles({
+    logout: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      padding: '10px',
+    },
+  });
+  const classes = useStyles();
+
+  return (
+    <div>
+      <div className={classes.logout}>
+        <button onClick={onLogoutClick}>
+          <ExitToAppOutlinedIcon
+            fontSize='large'
+            style={{ color: '#247B7B' }}
+          />
+        </button>
       </div>
-    );
-  }
+
+      <DashboardHome />
+    </div>
+  );
 }
 
 Dashboard.propTypes = {

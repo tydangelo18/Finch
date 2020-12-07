@@ -55,15 +55,26 @@ export default function Card(props, state, handleClick) {
   const useStyles = makeStyles({
     twitterCardDiv: {
       border: '1.2px solid #0D5C63',
-      padding: '2px',
+      padding: '10px',
       maxWidth: 400,
       boxShadow: '2px 2px 15px #247B7B',
+    },
+    cardDiv: {
+      margin: '25px',
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+    },
+    card: {
+      flex: '0 32%',
+      height: '100px',
+      marginBottom: '2%',
     },
   });
   const classes = useStyles();
 
   return (
-    <div className='card'>
+    <div className={classes.cardDiv}>
       <Grid container direction='column' className={classes.twitterCardDiv}>
         <Grid container justify='center'>
           <img className='pic' src={props.pic} alt=''></img>
