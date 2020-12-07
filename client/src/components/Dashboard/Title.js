@@ -11,11 +11,15 @@ export default function Title() {
       fontFamily: 'Montserrat',
     },
     finchTitle: {
-      fontSize: '60px',
-      fontWeight: 'bold',
+      fontSize: '65px',
+      WebkitTextFillColor: 'white',
+      WebkitTextStrokeWidth: '2px',
+      WebkitTextStrokeColor: '#247B7B',
+      textShadow: '2px 2px 0 #247B7B',
     },
     subTitle: {
-      fontSize: '15px',
+      fontSize: '18px',
+      color: '#0D5C63',
     },
   });
   const classes = useStyles();
@@ -23,7 +27,7 @@ export default function Title() {
   return (
     <div className={classes.titleDiv}>
       <h1 className={classes.finchTitle}>finch</h1>
-      <h5 className={classes.subTitle}>Twitter Analytics Tool</h5>
+      <h5 className={classes.subTitle}>Tweet Finder Tool</h5>
     </div>
   );
 }
