@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SaveButton from './SaveButton';
-import { Grid } from '@material-ui/core'
+import { Grid, makeStyles } from '@material-ui/core';
 
 export default function Card(props, state, handleClick) {
   // declare responses as a variable
@@ -51,23 +51,49 @@ export default function Card(props, state, handleClick) {
       });
   };
 
+  // Style Hook
+  const useStyles = makeStyles({
+    twitterCardDiv: {
+      border: '1.2px solid #0D5C63',
+      padding: '2px',
+      maxWidth: 400,
+      boxShadow: '2px 2px 15px #247B7B',
+    },
+  });
+  const classes = useStyles();
+
   return (
     <div className='card'>
-      <div className='tweet'>
-        <img className='pic' src={props.pic} alt=''></img>
-        <h2 className='name'>{props.name}</h2>
-        <h6 className='userName'>@{props.username}</h6>
-        <p className='following'>{props.following} Following</p>
-        <p className='followers'>{props.followers} Followers</p>
-        <p className='userTweet'>{props.userTweet} Tweets</p>
-        <p className='tweet'>{props.tweet}</p>
-        <p className='date'>{props.date}</p>
-        <p className='likes'>{props.likes} Likes</p>
-        <p className='retweets'>{props.retweets} Retweets</p>
-        <p className='replies'>{props.replies} Replies</p>
-      </div>
-
-      <SaveButton handleClick={handleClick} />
+      <Grid container direction='column' className={classes.twitterCardDiv}>
+        <Grid container justify='center'>
+          <img className='pic' src={props.pic} alt=''></img>
+        </Grid>
+        <Grid container justify='center'>
+          <h2 className='name'>{props.name}</h2>
+        </Grid>
+        <Grid container justify='center'>
+          <h6 className='userName'>@{props.username}</h6>
+        </Grid>
+        <Grid container justify='center'>
+          <p className='following'>{props.following} Following</p>
+          <p className='followers'>{props.followers} Followers</p>
+          <p className='userTweet'>{props.userTweet} Tweets</p>
+        </Grid>
+        <Grid container justify='center'>
+          <p className='tweet'>{props.tweet}</p>
+        </Grid>
+        <Grid container justify='center'>
+          <p className='likes'>{props.likes} Likes</p>
+          <p className='retweets'>{props.retweets} Retweets</p>
+          <p className='replies'>{props.replies} Replies</p>
+        </Grid>
+        <Grid container justify='center'>
+          <p className='date'>{props.date}</p>
+        </Grid>
+        <Grid container justify='center'>
+          <SaveButton handleClick={handleClick} />
+        </Grid>
+      </Grid>
     </div>
   );
 }
