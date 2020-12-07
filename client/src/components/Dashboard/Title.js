@@ -1,14 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-class Title extends Component {
-    render() {
-        return (
-            <div className="titleDiv">
-                <h1 className="title">Finch</h1>
-                <h5 className="subTitle">Twitter Analytics Tool</h5>
-            </div>
-        )
-    }
-};
+export default function Title() {
+  // Style Hook
+  const useStyles = makeStyles({
+    titleDiv: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      fontFamily: 'Montserrat',
+    },
+    finchTitle: {
+      fontSize: '60px',
+      fontWeight: 'bold',
+    },
+    subTitle: {
+      fontSize: '15px',
+    },
+  });
+  const classes = useStyles();
 
-export default Title;
+  return (
+    <div className={classes.titleDiv}>
+      <h1 className={classes.finchTitle}>finch</h1>
+      <h5 className={classes.subTitle}>Twitter Analytics Tool</h5>
+    </div>
+  );
+}

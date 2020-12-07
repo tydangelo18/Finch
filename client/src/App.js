@@ -1,18 +1,19 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 //imports for authentication
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import jwt_decode from "jwt-decode";
-import setAuthToken from "./utils/setAuthToken";
-import { setCurrentUser, logoutUser } from "./actions/authActions";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
+import setAuthToken from './utils/setAuthToken';
+import { setCurrentUser, logoutUser } from './actions/authActions';
 //imports for pages
-import { Provider } from "react-redux";
-import Register from "./pages/Register/register";
-import Login from "./pages/Login/login";
-import Dashboard from "./pages/Dashboard/dashboard";
-import store from "./store";
-import PrivateRoute from "./components/private-route/PrivateRoute";
-import login from "./pages/Login/login";
+import { Provider } from 'react-redux';
+import Register from './pages/Register/register';
+import Login from './pages/Login/login';
+import Dashboard from './pages/Dashboard/dashboard';
+import store from './store';
+import PrivateRoute from './components/private-route/PrivateRoute';
+import login from './pages/Login/login';
 import saved from '../src/pages/saved';
+import './App.css';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -31,7 +32,7 @@ if (localStorage.jwtToken) {
     store.dispatch(logoutUser());
 
     //Redirect to login
-    window.location.href = "./";
+    window.location.href = './';
   }
 }
 
@@ -40,11 +41,11 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/saved" component={saved}/>
+          <Route exact path='/' component={Login} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/saved' component={saved} />
           <Switch>
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
           </Switch>
         </Router>
       </Provider>
