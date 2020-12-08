@@ -1,36 +1,51 @@
 # Finch marketing analyzer
 
-##User Story
+## Description
 
-I am an advertiser/marketing analyst that needs an app to help me track how products/company reputation is spreading through social media through Twitter metrics and performance, in order to create optimal ad campaigns.
+- Allows a user to search for and save Tweets by keywords.
 
-## Development Strategy
+## Technologies Used
 
-1. Brainstorming sessions on what app the group would like to build.
-2. Reading the Twitter API and understanding how it works.
-3. Using Material UI for CSS and reading documentation on how to use it in React JS.
-4. Build the app folder structure with routes, pages, components and adding package.json on both root and client levels.
-5. Back-end created the routes and made it possible to connect teh API. They also created the databases.
-6. Front-end created components which were rendered on the pages.
-7. Created a login page, a registration page, a dashboard and a saved tweets page.
-8. The login page has the emaill address and password fields in order for the user to insert their credentials and login.
-9. Registration page, similar to login has fields for the user to register on the app.
-10. Once loged in the user with be routed to the Dashboard where they can search keywords on the searchbar and they will receive results with tweets containing that keyword.
-11. While browsing on tweets the user can save tweets of their liking.
-
-## Technology Used
-
-- ReactJS
-- Material UI
-- Twitter API
-- Twit npm package
-- Proxy-Middleware
-- Axios
-- Concurrently
+- React.JS
+- MongoDB
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
+- Material UI
+- Twitter API and Documentation
+- Postman
 - Mongo Atlas
+- Responsively App
+- Concurrently
+- Mongoose
 - JSON Web Tokens
 - Passport.js
+- Google Fonts
+- Medium
+- Stack Overflow
+- Heroku
+
+## Preview
+
+### Desktop
+
+#### Log In Page
+
+![Screen Shot 2020-12-08 at 11 23 11 AM](https://user-images.githubusercontent.com/60044459/101519285-a1ce1c00-3948-11eb-85a7-9904e83415b4.png)
+
+#### Sign Up Page
+
+![Screen Shot 2020-12-08 at 11 23 29 AM](https://user-images.githubusercontent.com/60044459/101519338-af83a180-3948-11eb-84dc-b28496d3577c.png)
+
+#### Dashboard
+
+#### Saved Tweets Page
+
+### Mobile
+
+#### Log In Page
+
+#### Sign Up Page
+
+#### Dashboard
+
+#### Saved Tweets Page
