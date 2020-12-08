@@ -5,7 +5,7 @@ import SaveOutlinedIcon from '@material-ui/icons/SaveOutlined';
 export default function SavedLink() {
   return (
     <div>
-      <Link to='#'>
+      <Link to='/saved'>
         <SaveOutlinedIcon fontSize='large' style={{ color: '#247B7B' }} />
       </Link>
     </div>
