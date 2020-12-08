@@ -9,10 +9,11 @@ import { Provider } from 'react-redux';
 import Register from './pages/Register/register';
 import Login from './pages/Login/login';
 import Dashboard from './pages/Dashboard/dashboard';
+import Saved from './pages/Saved/Saved';
 import store from './store';
 import PrivateRoute from './components/private-route/PrivateRoute';
 import login from './pages/Login/login';
-import saved from '../src/pages/saved';
+
 import './App.css';
 
 // Check for token to keep user logged in
@@ -43,9 +44,9 @@ class App extends Component {
         <Router>
           <Route exact path='/' component={Login} />
           <Route exact path='/register' component={Register} />
-          <Route exact path='/saved' component={saved} />
           <Switch>
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
+            <PrivateRoute exact path='/saved' component={Saved} />
           </Switch>
         </Router>
       </Provider>

@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
-import TwitterAPI from '../../utils/TwitterAPI';
-import SavedTweets from '../../components/Saved/SavedTweets';
+
 import DashboardHome from '../../components/Dashboard/DashboardHome';
-import Button from '@material-ui/core/Button';
+
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 
