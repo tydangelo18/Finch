@@ -6,8 +6,8 @@ export default function SavedLink() {
   return (
     <div>
       <Link to='#'>
-      <SaveOutlinedIcon style={{ color: '#247B7B'}} />
+        <SaveOutlinedIcon fontSize='large' style={{ color: '#247B7B' }} />
       </Link>
     </div>
   );
-};
+}

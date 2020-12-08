@@ -32,7 +32,7 @@ export default function SearchBar(props) {
         />
         <div className='btnDiv'>
           <Button className='searchBtn' type='submit'>
-            <SearchOutlinedIcon style={{ color: '#247B7B' }} />
+            <SearchOutlinedIcon fontSize='large' style={{ color: '#247B7B' }} />
           </Button>
           <Button className='savedTweetsLink'>
             <SavedLink />

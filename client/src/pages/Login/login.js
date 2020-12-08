@@ -102,10 +102,7 @@ class Login extends Component {
               minWidth: 200,
             }}
           >
-            <Grid
-              container
-              justify='center'
-            >
+            <Grid container justify='center'>
               <img
                 src='https://cdn.dribbble.com/users/180062/screenshots/5623548/finch.png'
                 width={400}
@@ -151,7 +148,11 @@ class Login extends Component {
             />
             <div style={{ height: 20 }} />
             <Button
-              style={{ backgroundColor: '#247B7B' }}
+              style={{
+                backgroundColor: '#247B7B',
+                fontFamily: 'Montserrat',
+                fontWeight: 'bold',
+              }}
               color='primary'
               variant='contained'
               type='submit'
@@ -165,7 +166,11 @@ class Login extends Component {
               <Link
                 onClick={this.register}
                 variant='body'
-                style={{ fontWeight: 'bold', color: '#247B7B' }}
+                style={{
+                  fontWeight: 'bold',
+                  color: '#247B7B',
+                  fontFamily: 'Montserrat',
+                }}
               >
                 {'Sign Up'}
               </Link>
