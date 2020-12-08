@@ -78,12 +78,12 @@ class Register extends Component {
           <Typography
             style={{
               color: '#247B7B',
-              fontFamily: 'Montserrat',
+              fontFamily: 'Pacifico',
               fontSize: '50px',
               WebkitTextFillColor: 'white',
-              WebkitTextStrokeWidth: '1.5px',
+              WebkitTextStrokeWidth: '1.25px',
               WebkitTextStrokeColor: '#247B7B',
-              textShadow: '2px 2px 0 #247B7B',
+              textShadow: '.5px .5px 0 #247B7B',
             }}
           >
             Sign Up
@@ -203,8 +203,7 @@ class Register extends Component {
                 style={{
                   backgroundColor: '#247B7B',
                   color: '#FFFFFF',
-                  fontFamily: 'Montserrat',
-                  fontWeight: 'bold',
+                  fontFamily: 'Pacifico',
                 }}
               >
                 Sign Up

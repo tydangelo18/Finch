@@ -151,8 +151,7 @@ class Login extends Component {
             <Button
               style={{
                 backgroundColor: '#247B7B',
-                fontFamily: 'Montserrat',
-                fontWeight: 'bold',
+                fontFamily: 'Pacifico',
               }}
               color='primary'
               variant='contained'
@@ -168,9 +167,8 @@ class Login extends Component {
                 onClick={this.register}
                 variant='body'
                 style={{
-                  fontWeight: 'bold',
                   color: '#247B7B',
-                  fontFamily: 'Montserrat',
+                  fontFamily: 'Pacifico',
                 }}
               >
                 {'Sign Up'}

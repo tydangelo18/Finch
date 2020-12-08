@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 
 export default function Title() {
   // Style Hook
@@ -10,24 +11,34 @@ export default function Title() {
       alignItems: 'center',
       fontFamily: 'Montserrat',
     },
-    finchTitle: {
-      fontSize: '65px',
+    title: {
+      color: '#247B7B',
+      fontFamily: 'Pacifico',
+      fontSize: '50px',
       WebkitTextFillColor: 'white',
-      WebkitTextStrokeWidth: '2px',
+      WebkitTextStrokeWidth: '1.25px',
       WebkitTextStrokeColor: '#247B7B',
-      textShadow: '2px 2px 0 #247B7B',
+      textShadow: '.5px .5px 0 #247B7B',
     },
     subTitle: {
-      fontSize: '18px',
-      color: '#0D5C63',
+      color: '#247B7B',
+      fontFamily: 'Pacifico',
+      fontSize: '20px'
     },
   });
   const classes = useStyles();
 
   return (
     <div className={classes.titleDiv}>
-      <h1 className={classes.finchTitle}>finch</h1>
-      <h5 className={classes.subTitle}>Tweet Finder Tool</h5>
+      <Grid container justify='center'>
+        <img
+          src='https://cdn.dribbble.com/users/180062/screenshots/5623548/finch.png'
+          width={500}
+          alt='logo'
+        />
+      </Grid>
+      <h5 className={classes.title}>Tweet Finder Tool</h5>
+      <h5 className={classes.subTitle}>Search by Keyword</h5>
     </div>
   );
 }
