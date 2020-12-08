@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 // import LoginForm from '../../components/Login/form.js';
-import { AccountCircle, LockRounded } from '@material-ui/icons';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import {
   Typography,
   Container,
@@ -123,7 +124,7 @@ class Login extends Component {
               InputProps={{
                 startAdornment: (
                   <InputAdornment>
-                    <AccountCircle style={{ color: '#247B7B' }} />
+                    <EmailOutlinedIcon style={{ color: '#247B7B' }} />
                   </InputAdornment>
                 ),
               }}
@@ -141,7 +142,7 @@ class Login extends Component {
               InputProps={{
                 startAdornment: (
                   <InputAdornment>
-                    <LockRounded style={{ color: '#247B7B' }} />
+                    <LockOutlinedIcon style={{ color: '#247B7B' }} />
                   </InputAdornment>
                 ),
               }}

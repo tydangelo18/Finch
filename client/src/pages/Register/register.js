@@ -14,9 +14,13 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { InputAdornment } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import EnhancedEncryptionOutlinedIcon from '@material-ui/icons/EnhancedEncryptionOutlined';
 import Container from '@material-ui/core/Container';
 
 class Register extends Component {
@@ -72,9 +76,15 @@ class Register extends Component {
           <CssBaseline />
 
           <Typography
-            component='h4'
-            variant='h4'
-            style={{ color: '#247B7B', fontFamily: 'Montserrat' }}
+            style={{
+              color: '#247B7B',
+              fontFamily: 'Montserrat',
+              fontSize: '50px',
+              WebkitTextFillColor: 'white',
+              WebkitTextStrokeWidth: '1.5px',
+              WebkitTextStrokeColor: '#247B7B',
+              textShadow: '2px 2px 0 #247B7B',
+            }}
           >
             Sign Up
           </Typography>
@@ -98,6 +108,15 @@ class Register extends Component {
                   label='Name'
                   autoFocus
                   style={{ fontFamily: 'Montserrat' }}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment>
+                        <PermIdentityOutlinedIcon
+                          style={{ color: '#247B7B' }}
+                        />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -116,6 +135,13 @@ class Register extends Component {
                   name='email'
                   autoComplete='email'
                   style={{ fontFamily: 'Montserrat' }}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment>
+                        <EmailOutlinedIcon style={{ color: '#247B7B' }} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -134,6 +160,13 @@ class Register extends Component {
                   label='Password'
                   autoComplete='current-password'
                   style={{ fontFamily: 'Montserrat' }}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment>
+                        <LockOutlinedIcon style={{ color: '#247B7B' }} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -151,6 +184,15 @@ class Register extends Component {
                   name='password2'
                   label='Re-enter Password'
                   style={{ fontFamily: 'Montserrat' }}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment>
+                        <EnhancedEncryptionOutlinedIcon
+                          style={{ color: '#247B7B' }}
+                        />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Button
