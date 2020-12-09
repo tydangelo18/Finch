@@ -1,11 +1,12 @@
 import React from 'react';
+import axios from 'axios';
 import { Grid, makeStyles } from '@material-ui/core';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import DeleteButton from './DeleteButton';
 
-export default function SavedCard(props, state, handleClick) {
+export default function SavedCard(props, state) {
   const {
     pic,
     name,
@@ -18,6 +19,7 @@ export default function SavedCard(props, state, handleClick) {
     likes,
     retweets,
     replies,
+    onDeleteCallback,
   } = props;
 
   state = {
@@ -76,6 +78,27 @@ export default function SavedCard(props, state, handleClick) {
     },
   });
   const classes = useStyles();
+
+  const handleDelete = () => {
+    // event.preventDefault();
+
+    // const eventId = event.target.getAttribute('data-id')
+    // this.setState({ eventId: orderValue });
+    // console.log(event.target.getAttribute('data-id'));
+    axios({
+      url: `/api/tweets/${props.username}`,
+      method: 'delete',
+      data: state.posts,
+    })
+      .then(() => {
+        console.log('Data Deleted!');
+        props.onDeleteCallback();
+      })
+      .catch((err) => {
+        console.log('Server Error!');
+        console.log(err);
+      });
+  };
 
   return (
     <div className={classes.cardDiv}>
@@ -145,7 +168,7 @@ export default function SavedCard(props, state, handleClick) {
           }
         </Grid>
         <Grid item xs={2} className={classes.deleteBtn}>
-          <DeleteButton handleClick={handleClick} />
+          <DeleteButton handleDelete={handleDelete} eventId={props._id} />
         </Grid>
         <Grid item xs={5}>
           {

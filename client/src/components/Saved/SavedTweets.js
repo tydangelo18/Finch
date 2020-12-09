@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import DeleteButton from '../Saved/DeleteButton';
 import SavedCard from './SavedCard';
 
 class SavedTweets extends Component {
@@ -29,28 +28,6 @@ class SavedTweets extends Component {
       });
   };
 
-  // handleDelete = (event) => {
-  //   event.preventDefault();
-  //   console.log(event.target.getAttribute("data-id"));
-  //   axios({
-  //     url: "/api/tweets/:id",
-  //     method: "delete",
-  //     data: this.state.posts,
-  //   })
-  //     .then(() => {
-  //       console.log("Data Deleted!");
-  //     })
-  //     .then(() => {
-  //       console.log("Data Deleted!");
-  //     })
-  //     .catch((err) => {
-  //       console.log("Server Error!");
-  //       console.log(err);
-  //     });
-  //
-  //     <DeleteButton handleDelete={this.handleDelete} data-id={post._id} />
-  // };
-
   render() {
     return (
       <div
@@ -64,6 +41,7 @@ class SavedTweets extends Component {
       >
         {this.state.posts.map((post) => (
           <SavedCard
+            key={post._id}
             pic={post.pic}
             name={post.name}
             username={post.username}
@@ -75,6 +53,7 @@ class SavedTweets extends Component {
             likes={post.likes}
             retweets={post.retweets}
             replies={post.replies}
+            onDeleteCallback={this.getTweets}
           />
         ))}
       </div>
