@@ -45,7 +45,7 @@ app.use('/api/tweets', tweets);
  app.get('/api/gettweets', function(req, res) {
    const {searchVal} = req.query
 
-    axios.get(`https://api.twitter.com/2/tweets/search/recent?query=${searchVal}&tweet.fields=created_at,public_metrics&user.fields=profile_image_url,public_metrics,verified&expansions=author_id&max_results=10`, {
+    axios.get(`https://api.twitter.com/2/tweets/search/recent?query=${searchVal}&tweet.fields=created_at,public_metrics&user.fields=profile_image_url,public_metrics,verified&expansions=author_id&max_results=24`, {
                 headers: {
                     'Authorization': `Bearer ${key}`
                 }
