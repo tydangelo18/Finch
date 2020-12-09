@@ -3,8 +3,9 @@ import { Grid, makeStyles } from '@material-ui/core';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
+import DeleteButton from './DeleteButton';
 
-export default function SavedCard(props, state) {
+export default function SavedCard(props, state, handleClick) {
   const {
     pic,
     name,
@@ -70,6 +71,9 @@ export default function SavedCard(props, state) {
       fontFamily: 'Helvetica',
       color: '#888888',
     },
+    deleteBtn: {
+      color: '#247B7B',
+    },
   });
   const classes = useStyles();
 
@@ -131,6 +135,19 @@ export default function SavedCard(props, state) {
           </p>
         </Grid>
         <Grid item xs={3}>
+          {
+            // Empty Space
+          }
+        </Grid>
+        <Grid item xs={5}>
+          {
+            // Empty Space
+          }
+        </Grid>
+        <Grid item xs={2} className={classes.deleteBtn}>
+          <DeleteButton handleClick={handleClick} />
+        </Grid>
+        <Grid item xs={5}>
           {
             // Empty Space
           }

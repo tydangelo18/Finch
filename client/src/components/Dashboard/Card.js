@@ -91,6 +91,9 @@ export default function Card(props, state, handleClick) {
       fontFamily: 'Helvetica',
       color: '#888888',
     },
+    saveBtn: {
+      color: '#247B7B',
+    },
   });
   const classes = useStyles();
 
@@ -161,7 +164,7 @@ export default function Card(props, state, handleClick) {
             // Empty Space
           }
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} className={classes.saveBtn}>
           <SaveButton handleClick={handleClick} />
         </Grid>
         <Grid item xs={5}>
