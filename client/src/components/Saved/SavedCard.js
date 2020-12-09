@@ -38,8 +38,9 @@ export default function SavedCard(props, state) {
     twitterCardDiv: {
       border: '1.2px solid #0D5C63',
       padding: '10px',
-      maxWidth: 600,
+      maxWidth: 500,
       boxShadow: '2px 2px 15px #247B7B',
+      fontSize: '12px',
     },
     cardDiv: {
       margin: '25px',
@@ -114,20 +115,25 @@ export default function SavedCard(props, state) {
             // Empty Space
           }
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
             <ChatBubbleOutlineIcon /> {props.replies}
           </p>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
             <RepeatIcon /> {props.retweets}
           </p>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
             <FavoriteBorderOutlinedIcon /> {props.likes}
           </p>
+        </Grid>
+        <Grid item xs={3}>
+          {
+            // Empty Space
+          }
         </Grid>
       </Grid>
     </div>
