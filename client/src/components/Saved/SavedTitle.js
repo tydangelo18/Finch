@@ -5,7 +5,7 @@ import Divider from '@material-ui/core/Divider';
 
 export default function SavedTitle() {
   // Style Hook
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     savedTitleDiv: {
       padding: '10px',
     },
@@ -18,8 +18,11 @@ export default function SavedTitle() {
       WebkitTextStrokeColor: '#247B7B',
       textShadow: '.5px .5px 0 #247B7B',
       marginBottom: '10px',
+      [theme.breakpoints.down("sm")]: {
+        fontSize: '30px',
+      }
     },
-  });
+  }));
   const classes = useStyles();
   return (
     <div className={classes.savedTitleDiv}>

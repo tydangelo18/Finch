@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 
 export default function Title() {
   // Style Hook
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     titleDiv: {
       display: 'flex',
       flexDirection: 'column',
@@ -19,13 +19,16 @@ export default function Title() {
       WebkitTextStrokeWidth: '1.25px',
       WebkitTextStrokeColor: '#247B7B',
       textShadow: '.5px .5px 0 #247B7B',
+      [theme.breakpoints.down("sm")]: {
+        fontSize: '30px',
+      },
     },
     subTitle: {
       color: '#247B7B',
       fontFamily: 'Pacifico',
       fontSize: '20px'
     },
-  });
+  }));
   const classes = useStyles();
 
   return (

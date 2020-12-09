@@ -8,9 +8,12 @@ import { InputAdornment } from '@material-ui/core';
 
 export default function SearchBar(props) {
   // Style Hook
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     textField: {
       width: '400px',
+      [theme.breakpoints.down("sm")]: {
+        width: '300px',
+      },
     },
     searchDiv: {
       display: 'flex',
@@ -21,7 +24,7 @@ export default function SearchBar(props) {
     btnDiv: {
       margin: '6px',
     },
-  });
+  }));
   const classes = useStyles();
   return (
     <div className='searchBar'>
