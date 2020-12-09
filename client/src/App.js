@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 //imports for authentication
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
@@ -12,7 +12,7 @@ import Dashboard from './pages/Dashboard/dashboard';
 import Saved from './pages/Saved/Saved';
 import store from './store';
 import PrivateRoute from './components/private-route/PrivateRoute';
-import login from './pages/Login/login';
+
 
 import './App.css';
 

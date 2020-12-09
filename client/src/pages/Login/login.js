@@ -3,27 +3,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
-// import LoginForm from '../../components/Login/form.js';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import {
-  Typography,
-  Container,
-  Box,
-  Grid,
-  InputAdornment,
-} from '@material-ui/core';
+import { Grid, InputAdornment } from '@material-ui/core';
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-// const useStyles = makeStyles({
-//   root: {}, // a style rule
-//   label: {}, // a nested style rule
-// });
 
 import classnames from 'classnames';
-
-import TwitterAPI from '../../utils/TwitterAPI';
 
 class Login extends Component {
   constructor() {

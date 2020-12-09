@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import SavedLink from '../Saved/SavedLink';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { InputAdornment } from '@material-ui/core';
 
@@ -48,7 +46,6 @@ export default function SearchBar(props) {
           <Button className='searchBtn' type='submit'>
             <SearchOutlinedIcon fontSize='large' style={{ color: '#247B7B' }} />
           </Button>
-          
         </div>
       </form>
     </div>

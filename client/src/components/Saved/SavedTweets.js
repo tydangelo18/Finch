@@ -53,7 +53,15 @@ class SavedTweets extends Component {
 
   render() {
     return (
-      <div className='savedList'>
+      <div
+        className='savedList'
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}
+      >
         {this.state.posts.map((post) => (
           <SavedCard
             pic={post.pic}

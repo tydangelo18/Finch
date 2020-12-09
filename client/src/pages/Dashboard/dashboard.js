@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import SavedLink from '../../components/Saved/SavedLink';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
