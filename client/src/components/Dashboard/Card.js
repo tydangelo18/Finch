@@ -59,7 +59,7 @@ export default function Card(props, state, handleClick) {
     twitterCardDiv: {
       border: '1.2px solid #0D5C63',
       padding: '10px',
-      maxWidth: 500,
+      maxWidth: 480,
       boxShadow: '2px 2px 15px #247B7B',
       fontSize: '12px',
     },

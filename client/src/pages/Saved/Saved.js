@@ -22,8 +22,10 @@ function Saved(props, onLogoutClick) {
   const useStyles = makeStyles({
     logout: {
       display: 'flex',
-      justifyContent: 'flex-end',
+      top: 0,
+      right: 0,
       padding: '10px',
+      position: 'fixed',
     },
   });
   const classes = useStyles();
