@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { InputAdornment } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
 
 export default function SearchBar(props) {
   // Style Hook
@@ -52,6 +53,7 @@ export default function SearchBar(props) {
           </Button>
         </div>
       </form>
+      <Divider />
     </div>
   );
 }

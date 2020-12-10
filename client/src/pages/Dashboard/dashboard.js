@@ -4,6 +4,7 @@ import SavedLink from '../../components/Saved/SavedLink';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import DashboardHome from '../../components/Dashboard/DashboardHome';
+import Footer from '../../components/Dashboard/Footer';
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -43,6 +44,7 @@ function Dashboard(props, onLogoutClick) {
       </div>
 
       <DashboardHome />
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import SavedTitle from '../../components/Saved/SavedTitle';
 import SavedTweets from '../../components/Saved/SavedTweets';
+import Footer from '../../components/Dashboard/Footer';
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
@@ -49,6 +50,7 @@ function Saved(props, onLogoutClick) {
       </div>
       <SavedTitle />
       <SavedTweets />
+      <Footer />
     </div>
   );
 }
