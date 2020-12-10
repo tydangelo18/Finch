@@ -84,7 +84,6 @@ export default function SavedCard(props, state) {
 
   // Delete Tweet Method
   const handleDelete = () => {
-    
     axios({
       url: `/api/tweets/${props.username}`,
       method: 'delete',
@@ -110,12 +109,7 @@ export default function SavedCard(props, state) {
           <h2 className={classes.name}>{props.name}</h2>
           <h6 className={classes.userName}>@{props.username}</h6>
         </Grid>
-        <Grid item xs={6}>
-          {
-            // Empty Space
-          }
-        </Grid>
-        <Grid item xs={1}>
+        <Grid item xs={8}>
           {
             // Empty Space
           }
