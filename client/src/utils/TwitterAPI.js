@@ -39,7 +39,7 @@ class TwitterAPI extends Component {
         })
 
         // Log the Tweet & User arrays
-        console.log('=========> twitRes', this.state.tweets, this.state.users);
+        console.log('Twitter Response: ', this.state.tweets, this.state.users);
     })
     }
 

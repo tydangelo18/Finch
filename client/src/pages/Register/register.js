@@ -97,7 +97,7 @@ class Register extends Component {
                   name='name'
                   required
                   fullWidth
-                  id='name'
+                  
                   label='Name'
                   autoFocus
                   style={{ fontFamily: 'Montserrat' }}

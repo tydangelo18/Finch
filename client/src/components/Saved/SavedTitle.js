@@ -5,6 +5,7 @@ import Divider from '@material-ui/core/Divider';
 
 export default function SavedTitle() {
   // Style Hook
+    // Using Breakpoints for mobile responsiveness of 'My Saved Tweets' title
   const useStyles = makeStyles((theme) => ({
     savedTitleDiv: {
       padding: '10px',
@@ -23,6 +24,7 @@ export default function SavedTitle() {
       }
     },
   }));
+  // Call Style Hook
   const classes = useStyles();
   return (
     <div className={classes.savedTitleDiv}>

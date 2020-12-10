@@ -8,9 +8,7 @@ class List extends Component {
       for (let j = 0; j < this.props.tweets.length; j++) {
         if (this.props.tweets[j].author_id === this.props.users[i].id) {
           let tweets = this.props.tweets[j];
-          //Object.defineProperty(tweets, "tweet_metrics",
-          //   Object.getOwnPropertyDescriptor(tweets, "public_metrics"));
-          //   delete tweets["public_metrics"];
+
           const clone = (obj) => Object.assign({}, obj);
           const renameKey = (object, key, newKey) => {
             const clonedObj = clone(object);
@@ -21,11 +19,8 @@ class List extends Component {
           };
           tweets = renameKey(tweets, 'public_metrics', 'tweet_metrics');
           let newObj = { ...tweets, ...this.props.users[i] };
-          // let newArr = this.props.tweets[j]
-          newArr.push(newObj);
 
-          // console.log(newObj);
-          // console.log(typeof tweets);
+          newArr.push(newObj);
         }
       }
     }

@@ -7,9 +7,7 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
 
 export default function Card(props, state, handleClick) {
-  // declare responses as a variable
-  // set state with repsonses
-
+  // Destructure Props 
   const {
     tweet,
     date,
@@ -24,6 +22,7 @@ export default function Card(props, state, handleClick) {
     userTweet,
   } = props;
 
+  // Destructure State
   state = {
     tweet,
     date,
@@ -38,6 +37,7 @@ export default function Card(props, state, handleClick) {
     userTweet,
   };
 
+  // Save Tweet Method
   handleClick = (event) => {
     event.preventDefault();
 

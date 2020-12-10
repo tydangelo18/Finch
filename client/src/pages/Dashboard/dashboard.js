@@ -14,7 +14,7 @@ function Dashboard(props, onLogoutClick) {
     props.logoutUser();
   };
 
-  const { user } = props.auth;
+  // const { user } = props.auth;
 
   // Style Hook
   const useStyles = makeStyles({

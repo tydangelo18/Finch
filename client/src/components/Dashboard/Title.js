@@ -29,6 +29,7 @@ export default function Title() {
       fontSize: '20px'
     },
   }));
+  // Call Style Hook
   const classes = useStyles();
 
   return (

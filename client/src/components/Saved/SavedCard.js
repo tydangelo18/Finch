@@ -7,6 +7,7 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import DeleteButton from './DeleteButton';
 
 export default function SavedCard(props, state) {
+  // Destructure Props
   const {
     pic,
     name,
@@ -22,6 +23,7 @@ export default function SavedCard(props, state) {
     onDeleteCallback,
   } = props;
 
+  // Destructure State
   state = {
     pic,
     name,
@@ -77,14 +79,12 @@ export default function SavedCard(props, state) {
       color: '#247B7B',
     },
   });
+  // Call Style Hook
   const classes = useStyles();
 
+  // Delete Tweet Method
   const handleDelete = () => {
-    // event.preventDefault();
-
-    // const eventId = event.target.getAttribute('data-id')
-    // this.setState({ eventId: orderValue });
-    // console.log(event.target.getAttribute('data-id'));
+    
     axios({
       url: `/api/tweets/${props.username}`,
       method: 'delete',

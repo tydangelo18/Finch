@@ -25,6 +25,7 @@ export default function SearchBar(props) {
       margin: '6px',
     },
   }));
+  // Call Style Hook
   const classes = useStyles();
   return (
     <div className='searchBar'>
