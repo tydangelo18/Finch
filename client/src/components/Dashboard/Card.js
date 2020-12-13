@@ -7,7 +7,7 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
 
 export default function Card(props, state, handleClick) {
-  // Destructure Props 
+  // Destructure Props
   const {
     tweet,
     date,
