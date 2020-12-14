@@ -20,7 +20,6 @@ export default function SavedCard(props, state) {
     likes,
     retweets,
     replies,
-    onDeleteCallback,
   } = props;
 
   // Destructure State

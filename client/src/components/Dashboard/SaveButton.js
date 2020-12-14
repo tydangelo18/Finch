@@ -5,14 +5,15 @@ import { setAlert } from '../../actions/alert';
 import TurnedInNotOutlinedIcon from '@material-ui/icons/TurnedInNotOutlined';
 
 const SaveButton = (props) => {
-  const { handleClick } = props;
+  // Destructure handleClick and setAlert so that we can pass them in as props in the onClick function
+  const { handleClick, setAlert } = props;
   return (
     <div className='saveBtn'>
       <button
         className='btn'
         onClick={(e) => {
           handleClick(e);
-          setAlert();
+          setAlert('Tweet Saved! ', 'success');
         }}
       >
         <TurnedInNotOutlinedIcon />

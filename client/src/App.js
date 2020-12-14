@@ -8,6 +8,7 @@ import Register from './pages/Register/register';
 import Login from './pages/Login/login';
 import Dashboard from './pages/Dashboard/dashboard';
 import Saved from './pages/Saved/Saved';
+import Alert from './components/Dashboard/Alert';
 import store from './store';
 import PrivateRoute from './components/private-route/PrivateRoute';
 
@@ -41,6 +42,7 @@ class App extends Component {
         <Router>
           <Route exact path='/' component={Login} />
           <Route exact path='/register' component={Register} />
+          <Alert />
           <Switch>
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
             <PrivateRoute exact path='/saved' component={Saved} />
