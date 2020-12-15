@@ -7,7 +7,7 @@ const Tweet = require('../../models/Tweet');
 // Routes
 
 // GET Route
-// Tested with POSTMAN
+// NEED TO TEST WITH POSTMAN
 router.get('/', (req, res) => {
   console.log('ROUTE HAS BEEN HIT');
   // Fetch all items from the DB
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 // POST Route
-// Tested With POSTMAN
+// NEED TO TEST WITH POSTMAN
 router.post('/saved', (req, res) => {
   console.log('Body', req.body);
   const data = req.body;

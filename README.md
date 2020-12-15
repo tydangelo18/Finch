@@ -1,8 +1,12 @@
-# Finch marketing analyzer
+# Finch Tweet Saver
 
 ## Description
 
 - Allows a user to search for and save Tweets by keywords.
+
+## Demo
+
+- Deployed to [Heroku]()
 
 ## Technologies Used
 
@@ -42,5 +46,5 @@
 ### Future Development
 
 - Dark Mode
-- Metrics Section that will allows users to compare tweet metrics against one another for a deeper analystics function, 
-- Facebook, Tik Tok, Instagram, Snapchat Data for deeper analysis. 
+- Metrics Section that will allows users to compare tweet metrics against one another for a deeper analystics function,
+- Facebook, Tik Tok, Instagram, Snapchat Data for deeper analysis.
