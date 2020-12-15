@@ -27,8 +27,6 @@
 
 ## Preview
 
-### Desktop
-
 #### Log In Page
 
 ![Screen Shot 2020-12-08 at 11 23 11 AM](https://user-images.githubusercontent.com/60044459/101519285-a1ce1c00-3948-11eb-85a7-9904e83415b4.png)
@@ -39,14 +37,10 @@
 
 #### Dashboard
 
-#### Saved Tweets Page
+![Screen Shot 2020-12-15 at 2 17 08 PM](https://user-images.githubusercontent.com/60044459/102268064-68655580-3ee0-11eb-903a-459dbbd7ff4e.png)
 
-### Mobile
+### Future Development
 
-#### Log In Page
-
-#### Sign Up Page
-
-#### Dashboard
-
-#### Saved Tweets Page
+- Dark Mode
+- Metrics Section that will allows users to compare tweet metrics against one another for a deeper analystics function, 
+- Facebook, Tik Tok, Instagram, Snapchat Data for deeper analysis. 
