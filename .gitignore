@@ -1,5 +1,9 @@
 node_modules
 
+db/connection.js
+
+config/keys.js
+
 .env
 
 src/tailwind.output.css
