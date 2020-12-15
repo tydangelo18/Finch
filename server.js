@@ -8,7 +8,10 @@ const cors = require('cors');
 const users = require('./routes/api/users');
 const tweets = require('./routes/api/tweets');
 const axios = require('axios');
-require('dotenv').config();
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 // Initialize Express for app
 const app = express();
