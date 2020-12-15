@@ -1,10 +1,8 @@
 // Require Dependencies
 const express = require('express');
-
 const connectDB = require('./db/connection');
-
+const path = require('path');
 const bodyParser = require('body-parser');
-
 const passport = require('passport');
 const cors = require('cors');
 const users = require('./routes/api/users');
@@ -39,6 +37,15 @@ require('./config/passport')(passport);
 app.use('/api/users', users);
 // Any request that goes to api/tweets/ refer to the routes/api/tweets folder
 app.use('/api/tweets', tweets);
+
+// Serve Static Assets in Production
+if (process.env.NODE_ENV === 'production') {
+  // Set Static Folder
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 // When api/gettweets/ is requested, call Twitter API and send to the client
 const key = process.env.KEY;
