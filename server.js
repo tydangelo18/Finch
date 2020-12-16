@@ -1,6 +1,6 @@
 // Require Dependencies
 const express = require('express');
-const connectDB = require('./db/connection');
+const connectDB = require('./db/Connection');
 const path = require('path');
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -14,6 +14,7 @@ require('dotenv').config();
 const app = express();
 
 connectDB();
+
 
 // Bodyparser Middleware
 app.use(
