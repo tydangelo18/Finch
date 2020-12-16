@@ -1,6 +1,6 @@
 // Require Dependencies
 const express = require('express');
-//const connectDB = require('./db/Connection');
+const connectionDB = require('./db/Connection');
 const path = require('path');
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -10,19 +10,6 @@ const tweets = require('./routes/api/tweets');
 const axios = require('axios');
 require('dotenv').config();
 
-const mongoose = require('mongoose');
-
-const URI =
-  'mongodb+srv://ty18:pQUsHphiwU5Qg5HD@finch.ccdd9.mongodb.net/finch?retryWrites=true&w=majority';
-const connectionDB = async () => {
-  await mongoose.connect(URI, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  });
-  console.log('DB has been connected!');
-};
-
-//module.exports = connectionDB;
 
 // Initialize Express for app
 const app = express();
