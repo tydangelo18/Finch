@@ -2,7 +2,7 @@
 
 ## Description
 
-- Allows a user to search for and save Tweets by keywords.
+- Allows a user to search and save Tweets by keywords.
 
 ## Demo
 
@@ -15,14 +15,12 @@
 - Node.js
 - Express.js
 - Material UI
-- Twitter API and Documentation
+- Twitter API
 - Postman
 - Mongo Atlas
 - Responsively App
 - Concurrently
 - Mongoose
-- JSON Web Tokens
-- Passport.js
 - Google Fonts
 - Medium
 - Youtube

@@ -5,7 +5,7 @@ import { logoutUser } from '../../actions/authActions';
 import SavedTitle from '../../components/Saved/SavedTitle';
 import SavedTweets from '../../components/Saved/SavedTweets';
 import Footer from '../../components/Dashboard/Footer';
-import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
+// import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
 import { Link } from 'react-router-dom';
@@ -34,19 +34,13 @@ function Saved(props, onLogoutClick) {
     <div>
       <div className={classes.logout}>
         <Button>
-          <Link to='/dashboard'>
+          <Link to='/'>
             <DashboardOutlinedIcon
               fontSize='large'
               style={{ color: '#247B7B' }}
             />
           </Link>
         </Button>
-        <button onClick={onLogoutClick}>
-          <ExitToAppOutlinedIcon
-            fontSize='large'
-            style={{ color: '#247B7B' }}
-          />
-        </button>
       </div>
       <SavedTitle />
       <SavedTweets />

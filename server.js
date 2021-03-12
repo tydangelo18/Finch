@@ -3,9 +3,9 @@ const express = require('express');
 const connectionDB = require('./db/Connection');
 const path = require('path');
 const bodyParser = require('body-parser');
-const passport = require('passport');
+// const passport = require('passport');
 const cors = require('cors');
-const users = require('./routes/api/users');
+// const users = require('./routes/api/users');
 const tweets = require('./routes/api/tweets');
 const axios = require('axios');
 require('dotenv').config();
@@ -29,14 +29,14 @@ app.use(express.json());
 app.use(cors());
 
 // Passport Middleware
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 // Passport config
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
 // Use Routes
 // Any request that goes to api/users/ refer to the routes/api/users folder
-app.use('/api/users', users);
+// app.use('/api/users', users);
 // Any request that goes to api/tweets/ refer to the routes/api/tweets folder
 app.use('/api/tweets', tweets);
 
