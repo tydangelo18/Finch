@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { logoutUser } from '../../actions/authActions';
+
 import SavedTitle from '../../components/Saved/SavedTitle';
 import SavedTweets from '../../components/Saved/SavedTweets';
 import Footer from '../../components/Dashboard/Footer';
-// import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
+
 import { makeStyles } from '@material-ui/core/styles';
 import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ function Saved(props, onLogoutClick) {
     props.logoutUser();
   };
 
-  // const { user } = props.auth;
+  
 
   // Style Hook
   const useStyles = makeStyles({
@@ -58,4 +58,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { logoutUser })(Saved);
+export default connect(mapStateToProps)(Saved);
