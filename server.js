@@ -1,5 +1,7 @@
 // Require Dependencies
 const express = require('express');
+const config = require('config');
+const api = config.get('KEY');
 const connectDB = require('./config/db');
 const path = require('path');
 const cors = require('cors');
@@ -33,7 +35,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // When api/gettweets/ is requested, call Twitter API and send to the client
-const key = process.env.KEY;
 app.get('/api/gettweets', function (req, res) {
   const { searchVal } = req.query;
 
@@ -42,7 +43,7 @@ app.get('/api/gettweets', function (req, res) {
       `https://api.twitter.com/2/tweets/search/recent?query=${searchVal}&tweet.fields=created_at,public_metrics&user.fields=profile_image_url,public_metrics,verified&expansions=author_id&max_results=24`,
       {
         headers: {
-          Authorization: `Bearer ${key}`,
+          Authorization: `Bearer ${api}`,
         },
       }
     )
