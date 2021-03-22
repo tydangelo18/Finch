@@ -157,18 +157,16 @@ export default function SavedCard(props, state) {
             // Empty Space
           }
         </Grid>
-        <Grid item xs={5}>
-          {
-            // Empty Space
-          }
-        </Grid>
-        <Grid item xs={2} className={classes.deleteBtn}>
+
+        <Grid
+          item
+          xs={12}
+          container
+          direction='row'
+          justify='center'
+          className={classes.deleteBtn}
+        >
           <DeleteButton handleDelete={handleDelete} eventId={props._id} />
-        </Grid>
-        <Grid item xs={5}>
-          {
-            // Empty Space
-          }
         </Grid>
       </Grid>
     </div>

@@ -21,18 +21,19 @@ function Saved(props, onLogoutClick) {
 
   // Style Hook
   const useStyles = makeStyles({
-    logout: {
+    home: {
       display: 'flex',
       top: 0,
       right: 0,
       padding: '10px',
       position: 'fixed',
+      marginTop: '10px',
     },
   });
   const classes = useStyles();
   return (
     <div>
-      <div className={classes.logout}>
+      <div className={classes.home}>
         <Button>
           <Link to='/'>
             <DashboardOutlinedIcon

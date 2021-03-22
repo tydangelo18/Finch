@@ -19,6 +19,7 @@ export default function SavedTitle() {
       WebkitTextStrokeColor: '#247B7B',
       textShadow: '.5px .5px 0 #247B7B',
       marginBottom: '10px',
+      marginTop: '0px',
       [theme.breakpoints.down("sm")]: {
         fontSize: '30px',
       }

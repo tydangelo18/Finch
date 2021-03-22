@@ -156,18 +156,16 @@ export default function Card(props, state, handleClick) {
             // Empty Space
           }
         </Grid>
-        <Grid item xs={5}>
-          {
-            // Empty Space
-          }
-        </Grid>
-        <Grid item xs={2} className={classes.saveBtn}>
+
+        <Grid
+          item
+          xs={12}
+          container
+          direction='row'
+          justify='center'
+          className={classes.saveBtn}
+        >
           <SaveButton handleClick={handleClick} />
-        </Grid>
-        <Grid item xs={5}>
-          {
-            // Empty Space
-          }
         </Grid>
       </Grid>
     </div>
