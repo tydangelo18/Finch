@@ -2,7 +2,7 @@
 
 ## Description
 
-- Allows a user to search and save Tweets by keywords.
+- A simple tool used to search and save Tweets by keywords.
 
 ## Demo
 
@@ -10,32 +10,17 @@
 
 ## Technologies Used
 
-- React.JS
+- React.js
 - MongoDB
 - Node.js
 - Express.js
 - Material UI
 - Twitter API
 - Postman
-- Mongo Atlas
-- Responsively App
-- Concurrently
 - Mongoose
-- Google Fonts
-- Medium
-- Youtube
-- Stack Overflow
 - Heroku
 
 ## Preview
-
-#### Log In Page
-
-![Screen Shot 2020-12-08 at 11 23 11 AM](https://user-images.githubusercontent.com/60044459/101519285-a1ce1c00-3948-11eb-85a7-9904e83415b4.png)
-
-#### Sign Up Page
-
-![Screen Shot 2020-12-08 at 11 23 29 AM](https://user-images.githubusercontent.com/60044459/101519338-af83a180-3948-11eb-84dc-b28496d3577c.png)
 
 #### Dashboard
 

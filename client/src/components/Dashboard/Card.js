@@ -39,7 +39,6 @@ export default function Card(props, state, handleClick) {
 
   // Save Tweet Method
   handleClick = (event) => {
-    
     event.preventDefault();
 
     axios({
@@ -75,22 +74,28 @@ export default function Card(props, state, handleClick) {
     name: {
       fontFamily: 'Helvetica',
       fontWeight: 'bold',
+      margin: '0px',
     },
     userName: {
       fontFamily: 'Helvetica',
       color: '#888888',
+      fontSize: '15px',
+      margin: '0px',
     },
     userMetrics: {
       fontFamily: 'Helvetica',
       color: '#888888',
       fontWeight: 'bold',
+      margin: '1px',
     },
     tweet: {
       fontFamily: 'Helvetica',
+      marginBottom: '0px',
     },
     tweetMetrics: {
       fontFamily: 'Helvetica',
       color: '#888888',
+      margin: '0px',
     },
     saveBtn: {
       color: '#247B7B',
@@ -101,23 +106,14 @@ export default function Card(props, state, handleClick) {
   return (
     <div className={classes.cardDiv}>
       <Grid container spacing={1} className={classes.twitterCardDiv}>
-        <Grid item xs={1}>
+        <Grid item xs={12}>
           <img className={classes.pic} src={props.pic} alt=''></img>
+          <div className={classes.userNameDiv}>
+            <h2 className={classes.name}>{props.name}</h2>
+            <h6 className={classes.userName}>@{props.username}</h6>
+          </div>
         </Grid>
-        <Grid item xs={3}>
-          <h2 className={classes.name}>{props.name}</h2>
-          <h6 className={classes.userName}>@{props.username}</h6>
-        </Grid>
-        <Grid item xs={6}>
-          {
-            // Empty Space
-          }
-        </Grid>
-        <Grid item xs={1}>
-          {
-            // Empty Space
-          }
-        </Grid>
+
         <Grid item xs={3}>
           <p className={classes.userMetrics}>{props.following} Following</p>
         </Grid>
