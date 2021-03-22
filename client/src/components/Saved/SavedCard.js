@@ -79,6 +79,9 @@ export default function SavedCard(props, state) {
       fontFamily: 'Helvetica',
       color: '#888888',
       margin: '0px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
     },
     deleteBtn: {
       color: '#247B7B',
@@ -144,12 +147,16 @@ export default function SavedCard(props, state) {
         </Grid>
         <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
-            <RepeatIcon /> {props.retweets}
+            <RepeatIcon />
+
+            {props.retweets}
           </p>
         </Grid>
         <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
-            <FavoriteBorderOutlinedIcon /> {props.likes}
+            <FavoriteBorderOutlinedIcon />
+
+            {props.likes}
           </p>
         </Grid>
         <Grid item xs={3}>

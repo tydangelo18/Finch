@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import finchLogo from '../../utils/finch.png';
 
 export default function Title() {
   // Style Hook
@@ -19,14 +20,16 @@ export default function Title() {
       WebkitTextStrokeWidth: '1.25px',
       WebkitTextStrokeColor: '#247B7B',
       textShadow: '.5px .5px 0 #247B7B',
-      [theme.breakpoints.down("sm")]: {
+      margin: '0px',
+      [theme.breakpoints.down('sm')]: {
         fontSize: '30px',
       },
     },
     subTitle: {
       color: '#247B7B',
       fontFamily: 'Pacifico',
-      fontSize: '20px'
+      fontSize: '20px',
+      marginBottom: '0px',
     },
   }));
   // Call Style Hook
@@ -36,7 +39,7 @@ export default function Title() {
     <div className={classes.titleDiv}>
       <Grid container justify='center'>
         <img
-          src='https://cdn.dribbble.com/users/180062/screenshots/5623548/finch.png'
+          src={finchLogo}
           width={500}
           alt='logo'
         />

@@ -96,6 +96,9 @@ export default function Card(props, state, handleClick) {
       fontFamily: 'Helvetica',
       color: '#888888',
       margin: '0px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
     },
     saveBtn: {
       color: '#247B7B',
@@ -138,17 +141,23 @@ export default function Card(props, state, handleClick) {
         </Grid>
         <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
-            <ChatBubbleOutlineIcon /> {props.replies}
+            <ChatBubbleOutlineIcon />
+
+            {props.replies}
           </p>
         </Grid>
         <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
-            <RepeatIcon /> {props.retweets}
+            <RepeatIcon />
+
+            {props.retweets}
           </p>
         </Grid>
         <Grid item xs={2}>
           <p className={classes.tweetMetrics}>
-            <FavoriteBorderOutlinedIcon /> {props.likes}
+            <FavoriteBorderOutlinedIcon />
+
+            {props.likes}
           </p>
         </Grid>
         <Grid item xs={3}>
